@@ -1,8 +1,9 @@
 package ssw567.team2.assignment1;
 
-public class Triangle {
 
-	public static String classifyTriangle(int a, int b, int c) {
+public class Triangle {
+			
+	public String classifyTriangle(int a, int b, int c) {
 		String triType = "unknown";
 		String angleType = "";
 		
@@ -23,25 +24,26 @@ public class Triangle {
 			angleType = "right ";
 		}
 		
-		return angleType +  triType;
+		return angleType + triType;
 	}
 
-	public static void main(String[] args) {
-		String answer = classifyTriangle(1,2,4);
-		System.out.println("Sides of 1,3,4 - " + answer + " triangle");
+	public static void main(String[] args) {		
+		// create new triangle
+		Triangle t1 = new Triangle();
+		
+		String answer = t1.classifyTriangle(1,2,4);
+		System.out.println("Sides of 1, 2, 4 - " + answer + " triangle");
 
-		answer = classifyTriangle(3,3,3);
-		System.out.println("Sides of 3,3,3 - " + answer + " triangle");
+		answer = t1.classifyTriangle(3,3,3);
+		System.out.println("Sides of 3, 3, 3 - " + answer + " triangle");
 
-		answer = classifyTriangle(3,3,5);
-		System.out.println("Sides of 3,3,5 - " + answer + " triangle");
+		answer = t1.classifyTriangle(3,3,5);
+		System.out.println("Sides of 3, 3, 5 - " + answer + " triangle");
 
-		answer = classifyTriangle(1,2,3);
-		System.out.println("Sides of 1,2,3 - " + answer + " triangle");
+		answer = t1.classifyTriangle(1,2,3);
+		System.out.println("Sides of 1, 2, 3 - " + answer + " triangle");
 
-		answer = classifyTriangle(3,4,5);
-		System.out.println("Sides of 3,4,5 - " + answer + " triangle");
-
+		answer = t1.classifyTriangle(3,4,5);
+		System.out.println("Sides of 3, 4, 5 - " + answer + "triangle");
 	}
-
 }
